@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Rentals | Paradise Cove</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar-top">
+      <div class="navbar-top-actions navbar-top-left"></div>
+
+      <a href="index.html" class="logo">
+        <img src="logo2.png" alt="Paradise Cove">
+      </a>
+
+      <div class="navbar-top-actions navbar-top-right">
+        <a href="contact.html" class="pill-btn">Contact</a>
+        <a href="#" class="pill-btn">Book Now</a>
+      </div>
+    </div>
+
+    <nav class="navbar-bottom">
+      <div class="nav-links" id="navLinks">
+        <a href="the-rentals.html">The Rentals</a>
+        <a href="rates&amp;availability.html">Rates &amp; Availability</a>
+        <a href="thingstodo.html">Things to Do</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-right">
+        <a href="#" class="social-icon icon-facebook" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 7.5h2V4.5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v6h3v-6h2.2l.8-3H13v-2c0-.55.45-1 1-1z"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="4.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17" cy="7" r="0.7" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" class="social-icon icon-pinterest" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.6l1.4-6s-.35-.7-.35-1.75c0-1.6.95-2.8 2.1-2.8 1 0 1.5.75 1.5 1.65 0 1-.65 2.5-1 3.9-.3 1.15.6 2.1 1.7 2.1 2.05 0 3.6-2.15 3.6-5.3 0-2.75-2-4.7-4.9-4.7-3.3 0-5.25 2.5-5.25 5 0 1 .4 2.05.85 2.6.1.1.1.2.1.3l-.35 1.4c-.05.2-.2.25-.4.15-1.5-.7-2.4-2.9-2.4-4.65 0-3.8 2.75-7.3 7.95-7.3 4.2 0 7.4 3 7.4 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.35-.65-2.75-1.4l-.75 2.85c-.27 1.05-1 2.35-1.5 3.15A10 10 0 1 0 12 2z"/></svg>
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <section class="banner rentals-banner">
+    <img src="rentalsbanner.jpg" alt="The Rentals">
+    <div class="rentals-banner-overlay"></div>
+    <img class="banner-shell-left" src="leftshell.png" alt="">
+    <img class="banner-shell-right" src="rightshell.png" alt="">
+  </section>
+
+  <section class="intro rentals-intro">
+    <div class="intro-content">
+      <h2>Find Your Perfect Rental</h2>
+      <div class="intro-underline"></div>
+      <div class="intro-row">
+        <p>Paradise Cove offers a variety of vacation rentals to fit every kind of getaway. Choose from spacious waterfront homes with room for the whole family, stylish condos just steps from the beach, and comfortable coastal retreats close to everything St. Pete has to offer. Whether you're planning a weekend escape or an extended stay, find a place that feels just right for your trip.</p>
+        <div class="intro-image-wrap">
+          <img class="intro-image" src="rentalsimage.jpg" alt="Paradise Cove rental">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="properties">
+    <div class="properties-search">
+      <div class="date-field">
+        <label for="arrivalDate">Arrival</label>
+        <input type="text" id="arrivalDate" placeholder="mm/dd/yyyy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+      </div>
+      <div class="date-field">
+        <label for="departureDate">Departure</label>
+        <input type="text" id="departureDate" placeholder="mm/dd/yyyy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+      </div>
+      <button type="button" class="search-btn">Search</button>
+    </div>
+
+    <div class="properties-toolbar">
+      <div class="my-rentals">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.7 6.6 4.6 5.2c2.2-1.05 4.6-.3 6 1.5.4.5.6.8.6.8s.2-.3.6-.8c1.4-1.8 3.8-2.55 6-1.5 2.9 1.4 3.6 4.9 1.9 7.7C18.7 16.65 12 21 12 21z"/></svg>
+        Saved Rentals (0)
+      </div>
+      <div class="properties-count">8 Properties</div>
+      <select class="sort-select">
+        <option>No sorting</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>Most Reviewed</option>
+      </select>
+    </div>
+
+    <div class="properties-grid">
+      <div class="property-card">
+        <div class="property-img-wrap">
+          <img src="rental photos/sunsetsands1.jpg" alt="Sunset Sands 204">
+          <button type="button" class="fav-btn" aria-label="Save property">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.7 6.6 4.6 5.2c2.2-1.05 4.6-.3 6 1.5.4.5.6.8.6.8s.2-.3.6-.8c1.4-1.8 3.8-2.55 6-1.5 2.9 1.4 3.6 4.9 1.9 7.7C18.7 16.65 12 21 12 21z"/></svg>
+          </button>
+        </div>
+        <div class="property-body">
+          <h3>Sunset Sands 204</h3>
+          <p class="property-meta">3 bedrooms | 2 baths | sleeps 6</p>
+          <div class="property-stars" style="--rating: 100%;">★★★★★<span class="stars-fill">★★★★★</span></div>
+          <p class="property-reviews">(4 reviews)</p>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-img-wrap">
+          <img src="rental photos/gulfbreeze1.jpg" alt="Gulf Breeze Retreat">
+          <button type="button" class="fav-btn" aria-label="Save property">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.7 6.6 4.6 5.2c2.2-1.05 4.6-.3 6 1.5.4.5.6.8.6.8s.2-.3.6-.8c1.4-1.8 3.8-2.55 6-1.5 2.9 1.4 3.6 4.9 1.9 7.7C18.7 16.65 12 21 12 21z"/></svg>
+          </button>
+        </div>
+        <div class="property-body">
+          <h3>Gulf Breeze Retreat</h3>
+          <p class="property-meta">2 bedrooms | 2 baths | sleeps 6</p>
+          <div class="property-stars" style="--rating: 90%;">★★★★★<span class="stars-fill">★★★★★</span></div>
+          <p class="property-reviews">(9 reviews)</p>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-img-wrap">
+          <div class="property-img-placeholder">Photo Coming Soon</div>
+          <button type="button" class="fav-btn" aria-label="Save property">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.7 6.6 4.6 5.2c2.2-1.05 4.6-.3 6 1.5.4.5.6.8.6.8s.2-.3.6-.8c1.4-1.8 3.8-2.55 6-1.5 2.9 1.4 3.6 4.9 1.9 7.7C18.7 16.65 12 21 12 21z"/></svg>
+          </button>
+        </div>
+        <div class="property-body">
+          <h3>Bayview Bungalow 12</h3>
+          <p class="property-meta">3 bedrooms | 3 baths | sleeps 12</p>
+          <div class="property-stars" style="--rating: 80%;">★★★★★<span class="stars-fill">★★★★★</span></div>
+          <p class="property-reviews">(6 reviews)</p>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-img-wrap">
+          <div class="property-img-placeholder">Photo Coming Soon</div>
+          <button type="button" class="fav-btn" aria-label="Save property">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.7 6.6 4.6 5.2c2.2-1.05 4.6-.3 6 1.5.4.5.6.8.6.8s.2-.3.6-.8c1.4-1.8 3.8-2.55 6-1.5 2.9 1.4 3.6 4.9 1.9 7.7C18.7 16.65 12 21 12 21z"/></svg>
+          </button>
+        </div>
+        <div class="property-body">
+          <h3>Coral Cove Villa</h3>
+          <p class="property-meta">3 bedrooms | 3 baths | sleeps 8</p>
+          <div class="property-stars" style="--rating: 100%;">★★★★★<span class="stars-fill">★★★★★</span></div>
+          <p class="property-reviews">(11 reviews)</p>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-img-wrap">
+          <div class="property-img-placeholder">Photo Coming Soon</div>
+          <button type="button" class="fav-btn" aria-label="Save property">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.7 6.6 4.6 5.2c2.2-1.05 4.6-.3 6 1.5.4.5.6.8.6.8s.2-.3.6-.8c1.4-1.8 3.8-2.55 6-1.5 2.9 1.4 3.6 4.9 1.9 7.7C18.7 16.65 12 21 12 21z"/></svg>
+          </button>
+        </div>
+        <div class="property-body">
+          <h3>Tidewater Terrace</h3>
+          <p class="property-meta">2 bedrooms | 1 bath | sleeps 4</p>
+          <div class="property-stars" style="--rating: 70%;">★★★★★<span class="stars-fill">★★★★★</span></div>
+          <p class="property-reviews">(3 reviews)</p>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-img-wrap">
+          <div class="property-img-placeholder">Photo Coming Soon</div>
+          <button type="button" class="fav-btn" aria-label="Save property">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.7 6.6 4.6 5.2c2.2-1.05 4.6-.3 6 1.5.4.5.6.8.6.8s.2-.3.6-.8c1.4-1.8 3.8-2.55 6-1.5 2.9 1.4 3.6 4.9 1.9 7.7C18.7 16.65 12 21 12 21z"/></svg>
+          </button>
+        </div>
+        <div class="property-body">
+          <h3>Palm Breeze Getaway</h3>
+          <p class="property-meta">4 bedrooms | 3 baths | sleeps 10</p>
+          <div class="property-stars" style="--rating: 90%;">★★★★★<span class="stars-fill">★★★★★</span></div>
+          <p class="property-reviews">(7 reviews)</p>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-img-wrap">
+          <div class="property-img-placeholder">Photo Coming Soon</div>
+          <button type="button" class="fav-btn" aria-label="Save property">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.7 6.6 4.6 5.2c2.2-1.05 4.6-.3 6 1.5.4.5.6.8.6.8s.2-.3.6-.8c1.4-1.8 3.8-2.55 6-1.5 2.9 1.4 3.6 4.9 1.9 7.7C18.7 16.65 12 21 12 21z"/></svg>
+          </button>
+        </div>
+        <div class="property-body">
+          <h3>Seaglass Cottage</h3>
+          <p class="property-meta">2 bedrooms | 2 baths | sleeps 5</p>
+          <div class="property-stars" style="--rating: 80%;">★★★★★<span class="stars-fill">★★★★★</span></div>
+          <p class="property-reviews">(5 reviews)</p>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-img-wrap">
+          <div class="property-img-placeholder">Photo Coming Soon</div>
+          <button type="button" class="fav-btn" aria-label="Save property">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.7 6.6 4.6 5.2c2.2-1.05 4.6-.3 6 1.5.4.5.6.8.6.8s.2-.3.6-.8c1.4-1.8 3.8-2.55 6-1.5 2.9 1.4 3.6 4.9 1.9 7.7C18.7 16.65 12 21 12 21z"/></svg>
+          </button>
+        </div>
+        <div class="property-body">
+          <h3>Driftwood Haven</h3>
+          <p class="property-meta">3 bedrooms | 2 baths | sleeps 7</p>
+          <div class="property-stars" style="--rating: 100%;">★★★★★<span class="stars-fill">★★★★★</span></div>
+          <p class="property-reviews">(8 reviews)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo2-white.png" alt="Paradise Cove" class="footer-logo">
+        <p>Escape to St. Petersburg, Florida and experience the perfect blend of coastal luxury, sunshine, and relaxation.</p>
+        <div class="footer-social">
+          <a href="#" class="social-icon icon-facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 7.5h2V4.5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v6h3v-6h2.2l.8-3H13v-2c0-.55.45-1 1-1z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="4.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17" cy="7" r="0.7" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="social-icon icon-pinterest" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.6l1.4-6s-.35-.7-.35-1.75c0-1.6.95-2.8 2.1-2.8 1 0 1.5.75 1.5 1.65 0 1-.65 2.5-1 3.9-.3 1.15.6 2.1 1.7 2.1 2.05 0 3.6-2.15 3.6-5.3 0-2.75-2-4.7-4.9-4.7-3.3 0-5.25 2.5-5.25 5 0 1 .4 2.05.85 2.6.1.1.1.2.1.3l-.35 1.4c-.05.2-.2.25-.4.15-1.5-.7-2.4-2.9-2.4-4.65 0-3.8 2.75-7.3 7.95-7.3 4.2 0 7.4 3 7.4 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.35-.65-2.75-1.4l-.75 2.85c-.27 1.05-1 2.35-1.5 3.15A10 10 0 1 0 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col footer-explore">
+        <h4>Explore</h4>
+        <a href="the-rentals.html">The Rentals</a>
+        <a href="rates&amp;availability.html">Rates &amp; Availability</a>
+        <a href="thingstodo.html">Things to Do</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <p>St. Petersburg, FL</p>
+        <p><a href="tel:+17275550134">(727) 555-0134</a></p>
+        <p><a href="mailto:stay@paradisecove.com">stay@paradisecove.com</a></p>
+      </div>
+
+      <div class="footer-col footer-cta">
+        <h4>Ready to Book?</h4>
+        <p>Check rates and availability for your next getaway.</p>
+        <a href="#" class="footer-book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Paradise Cove. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const toggle = document.querySelector('.nav-toggle');
+      const links = document.getElementById('navLinks');
+      toggle.addEventListener('click', () => {
+        const isOpen = links.classList.toggle('open');
+        toggle.classList.toggle('open', isOpen);
+        toggle.setAttribute('aria-expanded', isOpen);
+      });
+    })();
+  </script>
+
+</body>
+</html>
