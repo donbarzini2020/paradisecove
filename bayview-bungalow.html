@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bayview Bungalow 12 | Paradise Cove</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body class="property-page">
+
+  <header class="navbar">
+    <div class="navbar-top">
+      <div class="navbar-top-actions navbar-top-left"></div>
+
+      <a href="index.html" class="logo">
+        <img src="logo2.png" alt="Paradise Cove">
+      </a>
+
+      <div class="navbar-top-actions navbar-top-right">
+        <a href="contact.html" class="pill-btn">Contact</a>
+        <a href="#" class="pill-btn">Book Now</a>
+      </div>
+    </div>
+
+    <nav class="navbar-bottom">
+      <div class="nav-links" id="navLinks">
+        <a href="the-rentals.html">The Rentals</a>
+        <a href="rates&amp;availability.html">Rates &amp; Availability</a>
+        <a href="thingstodo.html">Things to Do</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-right">
+        <a href="#" class="social-icon icon-facebook" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 7.5h2V4.5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v6h3v-6h2.2l.8-3H13v-2c0-.55.45-1 1-1z"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="4.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17" cy="7" r="0.7" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" class="social-icon icon-pinterest" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.6l1.4-6s-.35-.7-.35-1.75c0-1.6.95-2.8 2.1-2.8 1 0 1.5.75 1.5 1.65 0 1-.65 2.5-1 3.9-.3 1.15.6 2.1 1.7 2.1 2.05 0 3.6-2.15 3.6-5.3 0-2.75-2-4.7-4.9-4.7-3.3 0-5.25 2.5-5.25 5 0 1 .4 2.05.85 2.6.1.1.1.2.1.3l-.35 1.4c-.05.2-.2.25-.4.15-1.5-.7-2.4-2.9-2.4-4.65 0-3.8 2.75-7.3 7.95-7.3 4.2 0 7.4 3 7.4 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.35-.65-2.75-1.4l-.75 2.85c-.27 1.05-1 2.35-1.5 3.15A10 10 0 1 0 12 2z"/></svg>
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <section class="banner rentals-banner">
+    <img src="rentalsbanner.png" alt="Paradise Cove Rentals">
+  </section>
+
+  <main class="property-detail">
+    <div class="property-detail-inner">
+      <a href="the-rentals.html" class="property-back-link">&larr; Back to All Rentals</a>
+
+      <div class="property-gallery" id="propertyGallery">
+        <img class="gallery-main" src="rental photos/bayviewbungalow1.jpg" alt="Bayview Bungalow 12 - main photo" data-index="0">
+        <img src="rental photos/bayviewbungalow2.jpg" alt="Bayview Bungalow 12 - photo 2" data-index="1">
+        <img src="rental photos/bayviewbungalow3.jpg" alt="Bayview Bungalow 12 - photo 3" data-index="2">
+        <img src="rental photos/bayviewbungalow4.jpg" alt="Bayview Bungalow 12 - photo 4" data-index="3">
+        <img src="rental photos/bayviewbungalow5.jpg" alt="Bayview Bungalow 12 - photo 5" data-index="4">
+      </div>
+
+      <div class="lightbox" id="lightbox" hidden>
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+        <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">&#10094;</button>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+        <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">&#10095;</button>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+      </div>
+
+      <div class="property-detail-layout">
+        <div class="property-main">
+          <div class="property-badges">
+            <span class="pill-btn">Bay View</span>
+            <span class="pill-btn">Family Friendly</span>
+            <span class="pill-btn">Game Room</span>
+          </div>
+
+          <h1 class="property-title">Bayview Bungalow 12</h1>
+          <p class="property-meta">Bungalow &middot; Sleeps 12 &middot; 3 Bedrooms &middot; 3 Bathrooms</p>
+
+          <div class="property-rating-row">
+            <div class="property-stars" style="--rating: 80%;">★★★★★<span class="stars-fill">★★★★★</span></div>
+            <p class="property-reviews">(6 reviews)</p>
+          </div>
+
+          <p class="property-description">Bayview Bungalow 12 is a spacious 3-bedroom, 3-bath home built for big groups, with room to sleep up to 12 guests. Gather around the game room, relax on the wraparound deck, or take in the bay views from nearly every room. It's the perfect home base for family reunions or a group getaway to St. Pete.</p>
+
+          <div class="amenities-section">
+            <h2 class="property-section-title">Amenities</h2>
+            <div class="amenities-grid">
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 9c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0 5-2.5 7.5 0"/><path d="M2 16c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0 5-2.5 7.5 0"/></svg>
+                <span>Beach Front</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0"/><path d="M5.5 12.5a10 10 0 0 1 13 0"/><path d="M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/></svg>
+                <span>Free WiFi</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v6a2 2 0 0 0 4 0V2"/><path d="M6 2v20"/><path d="M18 2c-1.7 0-3 2-3 5s1.3 5 3 5"/><path d="M18 2v20"/></svg>
+                <span>Kitchen</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><g><line x1="12" y1="3" x2="12" y2="21"/><path d="M9.8 5.2L12 7l2.2-1.8"/><path d="M9.8 18.8L12 17l2.2 1.8"/></g><g transform="rotate(60 12 12)"><line x1="12" y1="3" x2="12" y2="21"/><path d="M9.8 5.2L12 7l2.2-1.8"/><path d="M9.8 18.8L12 17l2.2 1.8"/></g><g transform="rotate(120 12 12)"><line x1="12" y1="3" x2="12" y2="21"/><path d="M9.8 5.2L12 7l2.2-1.8"/><path d="M9.8 18.8L12 17l2.2 1.8"/></g></svg>
+                <span>Air Conditioning</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="2"/><circle cx="7" cy="6.3" r="0.6" fill="currentColor" stroke="none"/><circle cx="9.5" cy="6.3" r="0.6" fill="currentColor" stroke="none"/></svg>
+                <span>Washing Machine</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="5.5" cy="10.8" r="1.9"/><circle cx="9.3" cy="6.7" r="2"/><circle cx="14.7" cy="6.7" r="2"/><circle cx="18.5" cy="10.8" r="1.9"/><ellipse cx="12" cy="16.6" rx="4.3" ry="3.4"/></svg>
+                <span>Pets Allowed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="booking-card">
+          <p class="booking-card-intro">Select dates and number of guests to see availability</p>
+
+          <div class="properties-search booking-search">
+            <div class="date-field">
+              <label for="checkinDate">Check-in</label>
+              <input type="text" id="checkinDate" placeholder="mm/dd/yyyy" autocomplete="off">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+            </div>
+            <div class="date-field">
+              <label for="checkoutDate">Check-out</label>
+              <input type="text" id="checkoutDate" placeholder="mm/dd/yyyy" autocomplete="off">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+            </div>
+          </div>
+
+          <div class="booking-guests">
+            <label for="guestCount">Guests</label>
+            <select id="guestCount" class="sort-select">
+              <option>1 guest</option>
+              <option>2 guests</option>
+              <option>3 guests</option>
+              <option>4 guests</option>
+              <option>5 guests</option>
+              <option>6 guests</option>
+              <option>7 guests</option>
+              <option>8 guests</option>
+              <option>9 guests</option>
+              <option>10 guests</option>
+              <option>11 guests</option>
+              <option selected>12 guests</option>
+            </select>
+          </div>
+
+          <div class="booking-actions">
+            <a href="#" class="search-btn btn-full">Book Now</a>
+            <a href="mailto:stay@paradisecove.com?subject=Inquiry: Bayview Bungalow 12" class="pill-btn btn-full">Send Inquiry</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo2-white.png" alt="Paradise Cove" class="footer-logo">
+        <p>Escape to St. Petersburg, Florida and experience the perfect blend of coastal luxury, sunshine, and relaxation.</p>
+        <div class="footer-social">
+          <a href="#" class="social-icon icon-facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 7.5h2V4.5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v6h3v-6h2.2l.8-3H13v-2c0-.55.45-1 1-1z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="4.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17" cy="7" r="0.7" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="social-icon icon-pinterest" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.6l1.4-6s-.35-.7-.35-1.75c0-1.6.95-2.8 2.1-2.8 1 0 1.5.75 1.5 1.65 0 1-.65 2.5-1 3.9-.3 1.15.6 2.1 1.7 2.1 2.05 0 3.6-2.15 3.6-5.3 0-2.75-2-4.7-4.9-4.7-3.3 0-5.25 2.5-5.25 5 0 1 .4 2.05.85 2.6.1.1.1.2.1.3l-.35 1.4c-.05.2-.2.25-.4.15-1.5-.7-2.4-2.9-2.4-4.65 0-3.8 2.75-7.3 7.95-7.3 4.2 0 7.4 3 7.4 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.35-.65-2.75-1.4l-.75 2.85c-.27 1.05-1 2.35-1.5 3.15A10 10 0 1 0 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col footer-explore">
+        <h4>Explore</h4>
+        <a href="the-rentals.html">The Rentals</a>
+        <a href="rates&amp;availability.html">Rates &amp; Availability</a>
+        <a href="thingstodo.html">Things to Do</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <p>St. Petersburg, FL</p>
+        <p><a href="tel:+17275550134">(727) 555-0134</a></p>
+        <p><a href="mailto:stay@paradisecove.com">stay@paradisecove.com</a></p>
+      </div>
+
+      <div class="footer-col footer-cta">
+        <h4>Ready to Book?</h4>
+        <p>Check rates and availability for your next getaway.</p>
+        <a href="#" class="footer-book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Paradise Cove. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+  <script>
+    (function () {
+      const toggle = document.querySelector('.nav-toggle');
+      const links = document.getElementById('navLinks');
+      toggle.addEventListener('click', () => {
+        const isOpen = links.classList.toggle('open');
+        toggle.classList.toggle('open', isOpen);
+        toggle.setAttribute('aria-expanded', isOpen);
+      });
+    })();
+
+    (function () {
+      const checkoutFP = flatpickr('#checkoutDate', {
+        dateFormat: 'm/d/Y',
+        minDate: 'today'
+      });
+
+      flatpickr('#checkinDate', {
+        dateFormat: 'm/d/Y',
+        minDate: 'today',
+        onChange: function (selectedDates) {
+          if (selectedDates[0]) {
+            const nextDay = new Date(selectedDates[0]);
+            nextDay.setDate(nextDay.getDate() + 1);
+            checkoutFP.set('minDate', nextDay);
+            if (checkoutFP.selectedDates[0] && checkoutFP.selectedDates[0] < nextDay) {
+              checkoutFP.setDate(nextDay);
+            }
+          }
+        }
+      });
+    })();
+
+    (function () {
+      const galleryImgs = Array.from(document.querySelectorAll('#propertyGallery img'));
+      const photos = galleryImgs.map((img) => ({ src: img.src, alt: img.alt }));
+
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxCounter = document.getElementById('lightboxCounter');
+      const closeBtn = document.getElementById('lightboxClose');
+      const prevBtn = document.getElementById('lightboxPrev');
+      const nextBtn = document.getElementById('lightboxNext');
+
+      let currentIndex = 0;
+
+      function showPhoto(index) {
+        currentIndex = (index + photos.length) % photos.length;
+        lightboxImg.src = photos[currentIndex].src;
+        lightboxImg.alt = photos[currentIndex].alt;
+        lightboxCounter.textContent = (currentIndex + 1) + ' / ' + photos.length;
+      }
+
+      function openLightbox(index) {
+        showPhoto(index);
+        lightbox.hidden = false;
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.hidden = true;
+        document.body.style.overflow = '';
+      }
+
+      galleryImgs.forEach((img, index) => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => openLightbox(index));
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+      prevBtn.addEventListener('click', () => showPhoto(currentIndex - 1));
+      nextBtn.addEventListener('click', () => showPhoto(currentIndex + 1));
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (lightbox.hidden) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPhoto(currentIndex - 1);
+        if (e.key === 'ArrowRight') showPhoto(currentIndex + 1);
+      });
+    })();
+  </script>
+
+</body>
+</html>

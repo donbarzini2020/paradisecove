@@ -477,7 +477,7 @@ a {
 
 .properties-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -495,7 +495,7 @@ a {
 .property-img-wrap img {
   display: block;
   width: 100%;
-  height: 200px;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
 }
 
@@ -504,7 +504,7 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 200px;
+  aspect-ratio: 3 / 2;
   background: var(--pill-bg);
   color: var(--text-muted);
   font-family: 'Raleway', sans-serif;
@@ -1049,6 +1049,11 @@ a {
   }
 }
 
+.rentals-banner {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
 .rentals-banner-overlay {
   position: absolute;
   inset: 0;
@@ -1388,4 +1393,364 @@ a {
   font-weight: 300;
   color: var(--text-muted);
   font-size: 17px;
+}
+
+/* Property Detail Page */
+.property-detail {
+  padding: 32px 0 80px;
+}
+
+.property-detail-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.property-back-link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--teal);
+  margin-bottom: 18px;
+}
+
+.property-gallery {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+  height: 460px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.property-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property-gallery .gallery-main {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.property-detail-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 32px;
+}
+
+.property-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.property-main .property-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 34px;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.property-main .property-meta {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.property-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 20px;
+}
+
+.property-rating-row .property-stars,
+.property-rating-row .property-reviews {
+  margin-bottom: 0;
+}
+
+.property-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.booking-card {
+  border: 1px solid var(--border-line);
+  border-radius: 10px;
+  padding: 24px;
+  position: sticky;
+  top: 24px;
+}
+
+.booking-card-intro {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.booking-search {
+  justify-content: stretch;
+  margin-bottom: 16px;
+}
+
+.booking-search .date-field {
+  flex: 1;
+  min-width: 0;
+}
+
+.booking-guests {
+  margin-bottom: 20px;
+}
+
+.booking-guests label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.booking-guests .sort-select {
+  width: 100%;
+}
+
+.booking-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+a.search-btn.btn-full {
+  padding: 12px 0;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.selected:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.flatpickr-day.today {
+  border-color: var(--teal);
+}
+
+.flatpickr-months .flatpickr-month,
+.flatpickr-current-month input.cur-year,
+.flatpickr-weekdays {
+  background: var(--teal);
+}
+
+@media (max-width: 900px) {
+  .property-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 140px 140px;
+    height: auto;
+  }
+
+  .property-gallery .gallery-main {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .property-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-card {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .property-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    height: auto;
+  }
+
+  .property-gallery img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .property-gallery .gallery-main {
+    grid-column: 1;
+    grid-row: auto;
+    aspect-ratio: 3 / 2;
+  }
+
+  .booking-search {
+    flex-direction: column;
+  }
+}
+
+/* Property Gallery Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 40px;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-prev {
+  left: 24px;
+}
+
+.lightbox-next {
+  right: 24px;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 600px) {
+  .lightbox {
+    padding: 16px;
+  }
+
+  .lightbox-nav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lightbox-prev {
+    left: 8px;
+  }
+
+  .lightbox-next {
+    right: 8px;
+  }
+}
+
+/* Amenities */
+.amenities-section {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border-line);
+}
+
+.property-section-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 26px;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 40px;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.amenity-item svg {
+  width: 22px;
+  height: 22px;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.amenity-item span {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  color: var(--text-dark);
+}
+
+@media (max-width: 560px) {
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .rentals-banner {
+    height: auto;
+    overflow: visible;
+  }
+
+  .rentals-banner img {
+    position: static;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
 }
