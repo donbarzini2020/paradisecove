@@ -69,6 +69,10 @@
         <img src="rental photos/driftwoodhaven3.jpg" alt="Driftwood Haven - photo 3" data-index="2">
         <img src="rental photos/driftwoodhaven4.jpg" alt="Driftwood Haven - photo 4" data-index="3">
         <img src="rental photos/driftwoodhaven5.jpg" alt="Driftwood Haven - photo 5" data-index="4">
+        <button type="button" class="gallery-view-all" id="galleryViewAll">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          View All Photos
+        </button>
       </div>
 
       <div class="lightbox" id="lightbox" hidden>
@@ -285,6 +289,11 @@
         img.style.cursor = 'pointer';
         img.addEventListener('click', () => openLightbox(index));
       });
+
+      const viewAllBtn = document.getElementById('galleryViewAll');
+      if (viewAllBtn) {
+        viewAllBtn.addEventListener('click', () => openLightbox(0));
+      }
 
       closeBtn.addEventListener('click', closeLightbox);
       prevBtn.addEventListener('click', () => showPhoto(currentIndex - 1));

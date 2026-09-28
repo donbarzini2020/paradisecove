@@ -51,9 +51,224 @@
     </nav>
   </header>
 
-  <main class="page-placeholder">
-    <h1>Things to Do</h1>
-    <p>Content coming soon.</p>
+  <section class="banner rentals-banner">
+    <picture>
+      <source media="(max-width: 600px)" srcset="thingstodobanner-mobile.png">
+      <img src="thingstodobanner.png" alt="Things to Do">
+    </picture>
+  </section>
+
+  <main class="ttd-page">
+    <div class="ttd-inner">
+      <h1 class="property-title ttd-title">Explore the Area</h1>
+      <div class="intro-underline ttd-underline"></div>
+      <p class="property-description ttd-intro">From nearby attractions to local dining, here's what's worth checking out during your stay.</p>
+
+      <div class="ttd-tabs">
+        <button type="button" class="ttd-tab active" data-tab="attractions">Attractions</button>
+        <button type="button" class="ttd-tab" data-tab="dining">Dining</button>
+      </div>
+
+      <div class="ttd-panel" data-panel="attractions">
+        <div class="ttd-grid">
+          <div class="ttd-card">
+            <img class="ttd-card-photo" src="things to do photos/buschgardens.jpeg" alt="Busch Gardens Tampa Bay">
+            <div class="ttd-card-body">
+              <h3>Busch Gardens Tampa Bay</h3>
+              <p class="ttd-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                10165 N McKinley Dr, Tampa, FL 33612
+              </p>
+              <div class="ttd-links">
+                <a href="https://buschgardens.com/tampa/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/><path d="M14 18l-1 1a4 4 0 0 1-5.7-5.7l1.2-1.2"/></svg>Visit Link</a>
+                <a href="tel:+18138844386"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>(813) 884-4386</a>
+              </div>
+              <a href="#" class="ttd-readmore">Read More &rarr;</a>
+            </div>
+          </div>
+
+          <div class="ttd-card">
+            <img class="ttd-card-photo" src="things to do photos/aquarium.avif" alt="Clearwater Marine Aquarium">
+            <div class="ttd-card-body">
+              <h3>Clearwater Marine Aquarium</h3>
+              <p class="ttd-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                249 Windward Passage, Clearwater, FL 33767
+              </p>
+              <div class="ttd-links">
+                <a href="https://www.cmaquarium.org/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/><path d="M14 18l-1 1a4 4 0 0 1-5.7-5.7l1.2-1.2"/></svg>Visit Link</a>
+                <a href="tel:+17274411790"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>(727) 441-1790</a>
+              </div>
+              <a href="#" class="ttd-readmore">Read More &rarr;</a>
+            </div>
+          </div>
+
+          <div class="ttd-card">
+            <img class="ttd-card-photo" src="things to do photos/pier.avif" alt="St. Petersburg Pier">
+            <div class="ttd-card-body">
+              <h3>St. Petersburg Pier</h3>
+              <p class="ttd-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                800 2nd Ave NE, St. Petersburg, FL 33701
+              </p>
+              <div class="ttd-links">
+                <a href="https://stpetepier.org/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/><path d="M14 18l-1 1a4 4 0 0 1-5.7-5.7l1.2-1.2"/></svg>Visit Link</a>
+                <a href="tel:+17278937248"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>(727) 893-7248</a>
+              </div>
+              <a href="#" class="ttd-readmore">Read More &rarr;</a>
+            </div>
+          </div>
+
+          <div class="ttd-card">
+            <img class="ttd-card-photo" src="things to do photos/tampazoo.jpg" alt="Zoo Tampa">
+            <div class="ttd-card-body">
+              <h3>Zoo Tampa</h3>
+              <p class="ttd-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                1101 W Sligh Ave, Tampa, FL 33604
+              </p>
+              <div class="ttd-links">
+                <a href="https://zootampa.org/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/><path d="M14 18l-1 1a4 4 0 0 1-5.7-5.7l1.2-1.2"/></svg>Visit Link</a>
+                <a href="tel:+18139358552"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>(813) 935-8552</a>
+              </div>
+              <a href="#" class="ttd-readmore">Read More &rarr;</a>
+            </div>
+          </div>
+
+          <div class="ttd-card">
+            <img class="ttd-card-photo" src="things to do photos/fineartsmuseum.jpg" alt="Museum of Fine Arts">
+            <div class="ttd-card-body">
+              <h3>Museum of Fine Arts</h3>
+              <p class="ttd-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                255 Beach Dr NE, St. Petersburg, FL 33701
+              </p>
+              <div class="ttd-links">
+                <a href="https://mfastpete.org/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/><path d="M14 18l-1 1a4 4 0 0 1-5.7-5.7l1.2-1.2"/></svg>Visit Link</a>
+                <a href="tel:+17278962667"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>(727) 896-2667</a>
+              </div>
+              <a href="#" class="ttd-readmore">Read More &rarr;</a>
+            </div>
+          </div>
+
+          <div class="ttd-card">
+            <img class="ttd-card-photo" src="things to do photos/marina.webp" alt="Hubbard's Marina">
+            <div class="ttd-card-body">
+              <h3>Hubbard's Marina</h3>
+              <p class="ttd-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                170 Boardwalk Pl E, Madeira Beach, FL 33708
+              </p>
+              <div class="ttd-links">
+                <a href="https://www.hubbardsmarina.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/><path d="M14 18l-1 1a4 4 0 0 1-5.7-5.7l1.2-1.2"/></svg>Visit Link</a>
+                <a href="tel:+17273931947"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>(727) 393-1947</a>
+              </div>
+              <a href="#" class="ttd-readmore">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ttd-panel" data-panel="dining" hidden>
+        <div class="ttd-grid">
+          <div class="ttd-card">
+            <img class="ttd-card-photo" src="things to do photos/buoys.jpg" alt="Buoys Waterfront Bar & Grill">
+            <div class="ttd-card-body">
+              <h3>Buoys Waterfront Bar &amp; Grill</h3>
+              <p class="ttd-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                677 75th Ave, St Pete Beach, FL 33706
+              </p>
+              <div class="ttd-links">
+                <a href="https://buoyswaterfrontbar.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/><path d="M14 18l-1 1a4 4 0 0 1-5.7-5.7l1.2-1.2"/></svg>Visit Link</a>
+                <a href="tel:+17279392369"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>(727) 939-2369</a>
+              </div>
+              <a href="#" class="ttd-readmore">Read More &rarr;</a>
+            </div>
+          </div>
+
+          <div class="ttd-card">
+            <img class="ttd-card-photo" src="things to do photos/brick&amp;mortar.jpg" alt="Brick &amp; Mortar">
+            <div class="ttd-card-body">
+              <h3>Brick &amp; Mortar</h3>
+              <p class="ttd-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                539 Central Ave, St. Petersburg, FL 33701
+              </p>
+              <div class="ttd-links">
+                <a href="https://www.brickandmortarstpete.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/><path d="M14 18l-1 1a4 4 0 0 1-5.7-5.7l1.2-1.2"/></svg>Visit Link</a>
+                <a href="tel:+17278226540"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>(727) 822-6540</a>
+              </div>
+              <a href="#" class="ttd-readmore">Read More &rarr;</a>
+            </div>
+          </div>
+
+          <div class="ttd-card">
+            <img class="ttd-card-photo" src="things to do photos/bellabrava.jpg" alt="BellaBrava">
+            <div class="ttd-card-body">
+              <h3>BellaBrava</h3>
+              <p class="ttd-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                204 Beach Dr NE, St. Petersburg, FL 33701
+              </p>
+              <div class="ttd-links">
+                <a href="https://bellabrava.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/><path d="M14 18l-1 1a4 4 0 0 1-5.7-5.7l1.2-1.2"/></svg>Visit Link</a>
+                <a href="tel:+17278955515"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>(727) 895-5515</a>
+              </div>
+              <a href="#" class="ttd-readmore">Read More &rarr;</a>
+            </div>
+          </div>
+
+          <div class="ttd-card">
+            <img class="ttd-card-photo" src="things to do photos/parkshoregrill.webp" alt="Parkshore Grill">
+            <div class="ttd-card-body">
+              <h3>Parkshore Grill</h3>
+              <p class="ttd-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                300 Beach Dr NE, St. Petersburg, FL 33701
+              </p>
+              <div class="ttd-links">
+                <a href="https://www.parkshoregrill.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/><path d="M14 18l-1 1a4 4 0 0 1-5.7-5.7l1.2-1.2"/></svg>Visit Link</a>
+                <a href="tel:+17278969463"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>(727) 896-9463</a>
+              </div>
+              <a href="#" class="ttd-readmore">Read More &rarr;</a>
+            </div>
+          </div>
+
+          <div class="ttd-card">
+            <img class="ttd-card-photo" src="things to do photos/crabbybills.webp" alt="Crabby Bill's">
+            <div class="ttd-card-body">
+              <h3>Crabby Bill's</h3>
+              <p class="ttd-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                5100 Gulf Blvd, St. Pete Beach, FL 33706
+              </p>
+              <div class="ttd-links">
+                <a href="https://stpetecrabbybills.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/><path d="M14 18l-1 1a4 4 0 0 1-5.7-5.7l1.2-1.2"/></svg>Visit Link</a>
+                <a href="tel:+17273608858"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>(727) 360-8858</a>
+              </div>
+              <a href="#" class="ttd-readmore">Read More &rarr;</a>
+            </div>
+          </div>
+
+          <div class="ttd-card">
+            <img class="ttd-card-photo" src="things to do photos/wildchild.webp" alt="Wild Child">
+            <div class="ttd-card-body">
+              <h3>Wild Child</h3>
+              <p class="ttd-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                2710 Central Ave, St. Petersburg, FL 33712
+              </p>
+              <div class="ttd-links">
+                <a href="https://www.wildchildstpete.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/><path d="M14 18l-1 1a4 4 0 0 1-5.7-5.7l1.2-1.2"/></svg>Visit Link</a>
+                <a href="tel:+17279547425"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>(727) 954-7425</a>
+              </div>
+              <a href="#" class="ttd-readmore">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -114,6 +329,21 @@
         const isOpen = links.classList.toggle('open');
         toggle.classList.toggle('open', isOpen);
         toggle.setAttribute('aria-expanded', isOpen);
+      });
+    })();
+
+    (function () {
+      const tabs = document.querySelectorAll('.ttd-tab');
+      const panels = document.querySelectorAll('.ttd-panel');
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          tabs.forEach((t) => t.classList.remove('active'));
+          tab.classList.add('active');
+          const name = tab.dataset.tab;
+          panels.forEach((p) => {
+            p.hidden = p.dataset.panel !== name;
+          });
+        });
       });
     })();
   </script>

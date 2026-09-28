@@ -51,9 +51,98 @@
     </nav>
   </header>
 
-  <main class="page-placeholder">
-    <h1>Rates &amp; Availability</h1>
-    <p>Content coming soon.</p>
+  <section class="banner rentals-banner">
+    <picture>
+      <source media="(max-width: 600px)" srcset="ratesbanner-mobile.png">
+      <img src="ratesbanner.png" alt="Rates & Availability">
+    </picture>
+  </section>
+
+  <main class="availability-page">
+    <div class="availability-inner">
+      <div class="availability-hero">
+        <div class="availability-hero-text">
+          <h1 class="property-title availability-title">Check Availability</h1>
+          <div class="intro-underline availability-underline"></div>
+          <p class="property-description availability-intro">Select a property below to see photos and view its availability calendar.</p>
+
+          <div class="availability-selector">
+            <label for="propertySelect">Select a Property</label>
+            <select id="propertySelect" class="sort-select"></select>
+          </div>
+        </div>
+
+        <div class="availability-property-card">
+          <div class="availability-photo-wrap" id="availabilityPhotoWrap">
+            <img id="availabilityPhoto" src="" alt="">
+            <button type="button" class="availability-view-photos" id="availabilityViewPhotos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              View All Photos
+            </button>
+          </div>
+          <div class="availability-property-info">
+            <h2 id="availabilityPropertyName"></h2>
+            <a id="availabilityPropertyLink" href="#" class="availability-view-link">View Property Details &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="lightbox" id="lightbox" hidden>
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+        <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">&#10094;</button>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+        <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">&#10095;</button>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+      </div>
+
+      <div class="availability-calendar-section">
+        <h2 class="property-section-title">Availability Calendar</h2>
+
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-swatch legend-unavailable"></span>Unavailable</span>
+          <span class="legend-item"><span class="legend-swatch legend-available"></span>Available</span>
+          <span class="legend-item"><span class="legend-swatch legend-checkout"></span>Check-Out Only</span>
+        </div>
+
+        <div class="calendar-months" id="calendarMonths"></div>
+      </div>
+
+      <div class="rates-section">
+        <h2 class="property-section-title">Rates &amp; Fees</h2>
+        <p class="rates-note">Nightly rates for <strong id="ratesPropertyName"></strong> vary by season and day of week. All rates shown are before taxes and fees.</p>
+
+        <div class="rates-table-wrap">
+          <table class="rates-table">
+            <thead>
+              <tr>
+                <th>Season</th>
+                <th>Weekday<br><span class="rates-th-sub">Sun&ndash;Thu</span></th>
+                <th>Weekend<br><span class="rates-th-sub">Fri&ndash;Sat</span></th>
+                <th>Min. Stay</th>
+              </tr>
+            </thead>
+            <tbody id="ratesTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="rates-fees">
+          <div class="rates-fee-item">
+            <span>Cleaning Fee</span>
+            <strong id="ratesCleaningFee"></strong>
+          </div>
+          <div class="rates-fee-item">
+            <span>Refundable Security Deposit</span>
+            <strong id="ratesDeposit"></strong>
+          </div>
+          <div class="rates-fee-item">
+            <span>Extended Stay Discount</span>
+            <strong>Save 10% on stays of 7+ nights</strong>
+          </div>
+        </div>
+
+        <p class="rates-disclaimer">Peak Season: Feb&ndash;Apr &amp; Jun&ndash;Aug &nbsp;&middot;&nbsp; Standard Season: May, Sep&ndash;Oct &amp; Dec &nbsp;&middot;&nbsp; Value Season: Jan &amp; Nov. Holiday weeks (Memorial Day, July 4th, Thanksgiving, Christmas &amp; New Year's) require a 5-night minimum stay.</p>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -115,6 +204,285 @@
         toggle.classList.toggle('open', isOpen);
         toggle.setAttribute('aria-expanded', isOpen);
       });
+    })();
+
+    (function () {
+      const properties = [
+        { slug: 'sunset-sands', name: 'Sunset Sands 204', link: 'sunset-sands.html', photos: ['rental photos/sunsetsands1.jpg', 'rental photos/sunsetsands2.jpg', 'rental photos/sunsetsands3.jpg', 'rental photos/sunsetsands4.jpg', 'rental photos/sunsetsands5.jpg'] },
+        { slug: 'gulf-breeze', name: 'Gulf Breeze Retreat', link: 'gulf-breeze.html', photos: ['rental photos/gulfbreeze1.jpg', 'rental photos/gulfbreeze2.jpg', 'rental photos/gulfbreeze3.jpg', 'rental photos/gulfbreeze4.jpg', 'rental photos/gulfbreeze5.jpg'] },
+        { slug: 'bayview-bungalow', name: 'Bayview Bungalow 12', link: 'bayview-bungalow.html', photos: ['rental photos/bayviewbungalow1.jpg', 'rental photos/bayviewbungalow2.jpg', 'rental photos/bayviewbungalow3.jpg', 'rental photos/bayviewbungalow4.jpg', 'rental photos/bayviewbungalow5.jpg'] },
+        { slug: 'coral-cove', name: 'Coral Cove Villa', link: 'coral-cove.html', photos: ['rental photos/coralcove1.jpg', 'rental photos/coralcove2.jpg', 'rental photos/coralcove3.jpg', 'rental photos/coralcove4.jpg', 'rental photos/coralcove5.jpg'] },
+        { slug: 'tidewater-terrace', name: 'Tidewater Terrace', link: 'tidewater-terrace.html', photos: ['rental photos/tidewaterterrace1.jpg', 'rental photos/tidewaterterrace2.jpg', 'rental photos/tidewaterterrace3.jpg', 'rental photos/tidewaterterrace4.jpg', 'rental photos/tidewaterterrace5.jpg'] },
+        { slug: 'palm-breeze', name: 'Palm Breeze Getaway', link: 'palm-breeze.html', photos: ['rental photos/palmbreeze1.png', 'rental photos/palmbreeze2.jpg', 'rental photos/palmbreeze3.jpg', 'rental photos/palmbreeze4.jpg', 'rental photos/palmbreeze5.jpg'] },
+        { slug: 'seaglass-cottage', name: 'Seaglass Cottage', link: 'seaglass-cottage.html', photos: ['rental photos/seaglasscottage1.jpg', 'rental photos/seaglasscottage2.jpg', 'rental photos/seaglasscottage3.jpg', 'rental photos/seaglasscottage4.jpg', 'rental photos/seaglasscottage5.jpg'] },
+        { slug: 'driftwood-haven', name: 'Driftwood Haven', link: 'driftwood-haven.html', photos: ['rental photos/driftwoodhaven1.jpg', 'rental photos/driftwoodhaven2.jpg', 'rental photos/driftwoodhaven3.jpg', 'rental photos/driftwoodhaven4.jpg', 'rental photos/driftwoodhaven5.jpg'] }
+      ];
+
+      const bookings = {
+        'sunset-sands': [{ start: '2026-10-05', end: '2026-10-10' }, { start: '2026-11-18', end: '2026-11-23' }],
+        'gulf-breeze': [{ start: '2026-09-29', end: '2026-10-03' }, { start: '2026-11-10', end: '2026-11-14' }],
+        'bayview-bungalow': [{ start: '2026-10-12', end: '2026-10-19' }],
+        'coral-cove': [{ start: '2026-10-01', end: '2026-10-05' }, { start: '2026-11-24', end: '2026-11-29' }],
+        'tidewater-terrace': [{ start: '2026-10-08', end: '2026-10-11' }],
+        'palm-breeze': [{ start: '2026-09-29', end: '2026-10-02' }, { start: '2026-11-05', end: '2026-11-09' }],
+        'seaglass-cottage': [{ start: '2026-10-15', end: '2026-10-20' }],
+        'driftwood-haven': [{ start: '2026-10-22', end: '2026-10-27' }, { start: '2026-11-15', end: '2026-11-18' }]
+      };
+
+      const rates = {
+        'sunset-sands': { value: [245, 280], standard: [295, 340], peak: [365, 420], cleaning: 140, deposit: 300 },
+        'gulf-breeze': { value: [210, 240], standard: [250, 290], peak: [315, 360], cleaning: 110, deposit: 250 },
+        'bayview-bungalow': { value: [335, 385], standard: [400, 460], peak: [500, 575], cleaning: 175, deposit: 350 },
+        'coral-cove': { value: [315, 360], standard: [380, 435], peak: [475, 545], cleaning: 160, deposit: 350 },
+        'tidewater-terrace': { value: [175, 200], standard: [210, 240], peak: [265, 305], cleaning: 95, deposit: 200 },
+        'palm-breeze': { value: [375, 430], standard: [450, 515], peak: [565, 650], cleaning: 190, deposit: 400 },
+        'seaglass-cottage': { value: [195, 225], standard: [235, 270], peak: [295, 340], cleaning: 110, deposit: 250 },
+        'driftwood-haven': { value: [255, 295], standard: [305, 350], peak: [380, 435], cleaning: 145, deposit: 300 }
+      };
+
+      const select = document.getElementById('propertySelect');
+      const photo = document.getElementById('availabilityPhoto');
+      const nameEl = document.getElementById('availabilityPropertyName');
+      const linkEl = document.getElementById('availabilityPropertyLink');
+      const monthsWrap = document.getElementById('calendarMonths');
+      const ratesPropertyNameEl = document.getElementById('ratesPropertyName');
+      const ratesTableBody = document.getElementById('ratesTableBody');
+      const ratesCleaningFeeEl = document.getElementById('ratesCleaningFee');
+      const ratesDepositEl = document.getElementById('ratesDeposit');
+
+      let currentPhotos = [];
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxCounter = document.getElementById('lightboxCounter');
+      const lightboxCloseBtn = document.getElementById('lightboxClose');
+      const lightboxPrevBtn = document.getElementById('lightboxPrev');
+      const lightboxNextBtn = document.getElementById('lightboxNext');
+      let lightboxIndex = 0;
+
+      function showLightboxPhoto(index) {
+        lightboxIndex = (index + currentPhotos.length) % currentPhotos.length;
+        lightboxImg.src = currentPhotos[lightboxIndex];
+        lightboxCounter.textContent = (lightboxIndex + 1) + ' / ' + currentPhotos.length;
+      }
+
+      function openLightbox(index) {
+        showLightboxPhoto(index);
+        lightbox.hidden = false;
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.hidden = true;
+        document.body.style.overflow = '';
+      }
+
+      document.getElementById('availabilityPhotoWrap').addEventListener('click', () => openLightbox(0));
+      document.getElementById('availabilityViewPhotos').addEventListener('click', (e) => {
+        e.stopPropagation();
+        openLightbox(0);
+      });
+      lightboxCloseBtn.addEventListener('click', closeLightbox);
+      lightboxPrevBtn.addEventListener('click', () => showLightboxPhoto(lightboxIndex - 1));
+      lightboxNextBtn.addEventListener('click', () => showLightboxPhoto(lightboxIndex + 1));
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (lightbox.hidden) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showLightboxPhoto(lightboxIndex - 1);
+        if (e.key === 'ArrowRight') showLightboxPhoto(lightboxIndex + 1);
+      });
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      let monthOffset = 0;
+
+      function fmt(d) {
+        return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+      }
+
+      function getStatus(slug, dateStr, dateObj) {
+        if (dateObj < today) return 'unavailable';
+        const ranges = bookings[slug] || [];
+        for (let i = 0; i < ranges.length; i++) {
+          const r = ranges[i];
+          if (dateStr >= r.start && dateStr < r.end) return 'unavailable';
+          if (dateStr === r.end) return 'checkout';
+        }
+        return 'available';
+      }
+
+      function buildMonth(year, month, showPrev, showNext) {
+        const first = new Date(year, month, 1);
+        const startDay = first.getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const monthName = first.toLocaleString('en-US', { month: 'long', year: 'numeric' });
+
+        const el = document.createElement('div');
+        el.className = 'calendar-month';
+
+        const header = document.createElement('div');
+        header.className = 'calendar-month-header';
+        header.textContent = monthName.toUpperCase();
+
+        if (showPrev) {
+          const prevBtn = document.createElement('button');
+          prevBtn.type = 'button';
+          prevBtn.className = 'calendar-nav-btn calendar-nav-prev';
+          prevBtn.innerHTML = '&#10094;';
+          prevBtn.setAttribute('aria-label', 'Previous months');
+          if (monthOffset <= 0) {
+            prevBtn.disabled = true;
+          } else {
+            prevBtn.addEventListener('click', () => { monthOffset -= 1; render(); });
+          }
+          header.appendChild(prevBtn);
+        }
+
+        if (showNext) {
+          const nextBtn = document.createElement('button');
+          nextBtn.type = 'button';
+          nextBtn.className = 'calendar-nav-btn calendar-nav-next';
+          nextBtn.innerHTML = '&#10095;';
+          nextBtn.setAttribute('aria-label', 'Next months');
+          nextBtn.addEventListener('click', () => { monthOffset += 1; render(); });
+          header.appendChild(nextBtn);
+        }
+
+        el.appendChild(header);
+
+        const weekdays = document.createElement('div');
+        weekdays.className = 'calendar-weekdays';
+        ['S', 'M', 'T', 'W', 'T', 'F', 'S'].forEach((d) => {
+          const s = document.createElement('span');
+          s.textContent = d;
+          weekdays.appendChild(s);
+        });
+        el.appendChild(weekdays);
+
+        const days = document.createElement('div');
+        days.className = 'calendar-days';
+
+        for (let i = 0; i < startDay; i++) {
+          const empty = document.createElement('div');
+          empty.className = 'calendar-day empty';
+          days.appendChild(empty);
+        }
+
+        for (let dnum = 1; dnum <= daysInMonth; dnum++) {
+          const dateObj = new Date(year, month, dnum);
+          const dateStr = fmt(dateObj);
+          const status = getStatus(select.value, dateStr, dateObj);
+          const cell = document.createElement('div');
+          cell.className = 'calendar-day ' + status;
+          if (dateObj.getTime() === today.getTime()) cell.classList.add('today');
+          cell.textContent = dnum;
+          days.appendChild(cell);
+        }
+
+        el.appendChild(days);
+        return el;
+      }
+
+      function isMobile() {
+        return window.matchMedia('(max-width: 900px)').matches;
+      }
+
+      function render() {
+        monthsWrap.innerHTML = '';
+        const base = new Date(today.getFullYear(), today.getMonth() + monthOffset, 1);
+        const mobile = isMobile();
+        const count = mobile ? 1 : 3;
+        for (let i = 0; i < count; i++) {
+          const m = new Date(base.getFullYear(), base.getMonth() + i, 1);
+          const showPrev = mobile ? true : i === 0;
+          const showNext = mobile ? true : i === count - 1;
+          monthsWrap.appendChild(buildMonth(m.getFullYear(), m.getMonth(), showPrev, showNext));
+        }
+      }
+
+      let lastIsMobile = isMobile();
+      window.addEventListener('resize', () => {
+        const nowMobile = isMobile();
+        if (nowMobile !== lastIsMobile) {
+          lastIsMobile = nowMobile;
+          render();
+        }
+      });
+
+      let touchStartX = null;
+      monthsWrap.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+
+      monthsWrap.addEventListener('touchend', (e) => {
+        if (touchStartX === null || !isMobile()) {
+          touchStartX = null;
+          return;
+        }
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        touchStartX = null;
+        const threshold = 40;
+        if (dx > threshold) {
+          if (monthOffset > 0) {
+            monthOffset -= 1;
+            render();
+          }
+        } else if (dx < -threshold) {
+          monthOffset += 1;
+          render();
+        }
+      });
+
+      function money(n) {
+        return '$' + n.toLocaleString('en-US');
+      }
+
+      function renderRates(slug) {
+        const r = rates[slug];
+        const rows = [
+          { label: 'Value Season', sub: 'Jan & Nov', wd: r.value[0], we: r.value[1], min: 2 },
+          { label: 'Standard Season', sub: 'May, Sep–Oct & Dec', wd: r.standard[0], we: r.standard[1], min: 2 },
+          { label: 'Peak Season', sub: 'Feb–Apr & Jun–Aug', wd: r.peak[0], we: r.peak[1], min: 3 }
+        ];
+
+        ratesTableBody.innerHTML = '';
+        rows.forEach((row) => {
+          const tr = document.createElement('tr');
+          tr.innerHTML =
+            '<td><strong>' + row.label + '</strong><span class="rates-td-sub">' + row.sub + '</span></td>' +
+            '<td>' + money(row.wd) + '<span class="rates-unit">/night</span></td>' +
+            '<td>' + money(row.we) + '<span class="rates-unit">/night</span></td>' +
+            '<td>' + row.min + ' nights</td>';
+          ratesTableBody.appendChild(tr);
+        });
+
+        ratesCleaningFeeEl.textContent = money(r.cleaning);
+        ratesDepositEl.textContent = money(r.deposit);
+      }
+
+      function updateProperty() {
+        const prop = properties.find((p) => p.slug === select.value);
+        currentPhotos = prop.photos;
+        photo.src = prop.photos[0];
+        photo.alt = prop.name;
+        nameEl.textContent = prop.name;
+        linkEl.href = prop.link;
+        ratesPropertyNameEl.textContent = prop.name;
+        renderRates(prop.slug);
+        render();
+      }
+
+      properties.forEach((p) => {
+        const opt = document.createElement('option');
+        opt.value = p.slug;
+        opt.textContent = p.name;
+        select.appendChild(opt);
+      });
+
+      select.addEventListener('change', updateProperty);
+      updateProperty();
     })();
   </script>
 

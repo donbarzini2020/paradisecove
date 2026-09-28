@@ -51,9 +51,66 @@
     </nav>
   </header>
 
-  <main class="page-placeholder">
-    <h1>Contact</h1>
-    <p>Content coming soon.</p>
+  <section class="banner rentals-banner">
+    <picture>
+      <source media="(max-width: 600px)" srcset="contactbanner-mobile.png">
+      <img src="contactbanner.png" alt="Contact Us">
+    </picture>
+  </section>
+
+  <main class="contact-page">
+    <div class="contact-inner">
+      <div class="contact-grid">
+        <div class="contact-info-col">
+          <h2 class="property-section-title">Get Social</h2>
+          <div class="contact-social-row">
+            <a href="#" class="contact-social-btn icon-facebook" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 7.5h2V4.5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v6h3v-6h2.2l.8-3H13v-2c0-.55.45-1 1-1z"/></svg>
+            </a>
+            <a href="#" class="contact-social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="4.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17" cy="7" r="0.7" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="contact-social-btn" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.6l1.4-6s-.35-.7-.35-1.75c0-1.6.95-2.8 2.1-2.8 1 0 1.5.75 1.5 1.65 0 1-.65 2.5-1 3.9-.3 1.15.6 2.1 1.7 2.1 2.05 0 3.6-2.15 3.6-5.3 0-2.75-2-4.7-4.9-4.7-3.3 0-5.25 2.5-5.25 5 0 1 .4 2.05.85 2.6.1.1.1.2.1.3l-.35 1.4c-.05.2-.2.25-.4.15-1.5-.7-2.4-2.9-2.4-4.65 0-3.8 2.75-7.3 7.95-7.3 4.2 0 7.4 3 7.4 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.35-.65-2.75-1.4l-.75 2.85c-.27 1.05-1 2.35-1.5 3.15A10 10 0 1 0 12 2z"/></svg>
+            </a>
+          </div>
+
+          <h2 class="property-section-title contact-info-heading">Contact Info</h2>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <span class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+              </span>
+              <span>St. Petersburg, FL</span>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h2.3c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.6 10c.9 2 2.4 3.5 4.4 4.4l1.2-1.2a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1V17c0 .6-.4 1-1 1h-1C9.8 18 4 12.2 4 5z"/></svg>
+              </span>
+              <a href="tel:+17275550134">(727) 555-0134</a>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              </span>
+              <a href="mailto:stay@paradisecove.com">stay@paradisecove.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h2 class="contact-form-title">Get in Touch with Us</h2>
+          <form class="contact-form" id="contactForm">
+            <input type="text" placeholder="Enter your full name" required>
+            <input type="email" placeholder="Enter your email" required>
+            <input type="tel" placeholder="Enter your phone number">
+            <textarea placeholder="Enter your message" rows="6" required></textarea>
+            <button type="submit" class="contact-submit-btn">Send Message</button>
+            <p class="contact-form-success" id="contactFormSuccess" hidden>Thanks for reaching out! We'll get back to you shortly.</p>
+          </form>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -114,6 +171,16 @@
         const isOpen = links.classList.toggle('open');
         toggle.classList.toggle('open', isOpen);
         toggle.setAttribute('aria-expanded', isOpen);
+      });
+    })();
+
+    (function () {
+      const form = document.getElementById('contactForm');
+      const success = document.getElementById('contactFormSuccess');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        form.reset();
+        success.hidden = false;
       });
     })();
   </script>
